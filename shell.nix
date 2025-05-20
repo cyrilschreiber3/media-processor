@@ -18,6 +18,9 @@ in
   with pkgs;
     mkShell {
       packages = [
+        # General dependencies
+        git
+
         # gomod2nix prerequisites
         goEnv
         gomod2nix
@@ -31,6 +34,9 @@ in
         gopls
         gotests
         impl
+
+        # Project specific dependencies
+        ffmpeg-full
       ];
 
       shellHook = ''
