@@ -1,0 +1,26 @@
+# Documentation: https://golangci-lint.run/usage/configuration/
+version: "2"
+linters:
+  default: all
+
+  settings:
+    tagliatelle:
+      case:
+        rules:
+          json: snake
+
+    varnamelen:
+      ignore-names:
+        - err
+        - ok
+
+    wsl:
+      allow-cuddle-declarations: true
+
+  disable:
+    - forbidigo # Allow print statements
+    - godox
+    - mnd
+    - revive
+    - whitespace
+    - err113 # Allow dynamic errors (fmt.ErrorF("..."))

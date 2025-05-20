@@ -1,0 +1,6 @@
+# Build output
+media-processor*
+result
+
+# Test files
+samples/*
