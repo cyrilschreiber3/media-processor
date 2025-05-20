@@ -18,9 +18,10 @@ linters:
       allow-cuddle-declarations: true
 
   disable:
+    - depguard # Allow non whitelisted package imports
+    - err113 # Allow dynamic errors (fmt.ErrorF("..."))
     - forbidigo # Allow print statements
     - godox
     - mnd
     - revive
     - whitespace
-    - err113 # Allow dynamic errors (fmt.ErrorF("..."))
