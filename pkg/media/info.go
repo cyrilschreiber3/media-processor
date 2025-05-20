@@ -172,8 +172,6 @@ func AnalyzeMediaInfo(info MediaInfo) Properties {
 				bitDepth = 8 // Default to 8 if error occurs
 			}
 
-			fmt.Printf("Bit depth for pixel format %s: %d\n", stream.PixelFormat, bitDepth)
-
 			if bitDepth > props.HighestBitDepth {
 				props.HighestBitDepth = bitDepth
 			}
