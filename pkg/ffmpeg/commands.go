@@ -34,7 +34,7 @@ func CreateProxyCommand(filePath string, proxyFilePath string, props media.Prope
 			cmd = append(cmd, "-pix_fmt", "yuv420p")
 		}
 
-		cmd = append(cmd, "-maxrate", "6M", "-preset", "fast")
+		cmd = append(cmd, "-maxrate", "7M", "-preset", "default")
 
 		if props.IsVertical {
 			cmd = append(cmd, "-vf", "scale=540:-2")
